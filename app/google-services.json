@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "556691317767",
+    "firebase_url": "https://otp-auth-509aa.firebaseio.com",
+    "project_id": "otp-auth-509aa",
+    "storage_bucket": "otp-auth-509aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556691317767:android:c605e6d088811a2de376a2",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556691317767-chd14jo5ct13t217pcdbqts259ffnc9m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrPa1dJWOHUXMgIhyLHTkyvyYkyDXCLXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556691317767-chd14jo5ct13t217pcdbqts259ffnc9m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
