@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.goodiebag.pinview.Pinview;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -31,7 +32,7 @@ public class ThirdActivity extends AppCompatActivity {
     private static final String TAG = "ThirdActivity";
     private FirebaseAuth fAuth;
     private TextView txtGivenPhoneNumber;
-    private EditText editTxtOTP;
+    private Pinview editTxtOTP;
     private Button btnNext;
     private String code;
     private TextView countDown;
@@ -74,14 +75,14 @@ public class ThirdActivity extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(editTxtOTP.getText().toString().length() == 6){
-                    Log.d(TAG, "onClick: " + editTxtOTP.getText());
-                    PhoneAuthCredential phoneAuthCredential = PhoneAuthProvider.getCredential(code, editTxtOTP.getText().toString());
+                if(editTxtOTP.getValue().toString().length() == 6){
+                    Log.d(TAG, "onClick: " + editTxtOTP.getValue());
+                    PhoneAuthCredential phoneAuthCredential = PhoneAuthProvider.getCredential(code, editTxtOTP.getValue().toString());
                     signInWithPhoneAuthCredential(phoneAuthCredential);
                     verification = false;
                 }else{
 
-                    Log.d(TAG, "onClick: " + editTxtOTP.getText());
+                    Log.d(TAG, "onClick: " + editTxtOTP.getValue());
                     Toast.makeText(ThirdActivity.this, "Enter valid code!", Toast.LENGTH_SHORT).show();
                 }
             }
